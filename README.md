@@ -12,86 +12,17 @@ Department of Digital Technology
 School of Planning and Architecture Jawaharlal Nehru Architecture and Fine Arts University
 Mahaveer Marg, Masab Tank, Hyderabad – 500028 June 2023
  
- JNAFAU SCHOOL OF PLANNING AND ARCHITECTURE
-Mahaveer Marg, Masab Tank, Hyderabad – 500028
-Department of Digital Technology.
-CERTIFICATE
-I/We Certify that the Design Project entitled “DTDP DEPARTMENT MANAGEMENT SYSTEM” submitted by MR. RADHA KRISHNA DESHPANDE bearing Roll No. 19011BC038 on this 5th of JUNE, 2023 in partial fulfillment of the Requirements for the Degree of BACHELOR OF TECHNOLOGY (DIGITAL TECHNIQUES FOR DESIGN AND PLANNING) of University is a bonafide work to the best of my/our knowledge and may be placed before the Examination Board for their consideration.
- Er.S.Ravi Kiran
-Project Guide
-S. Ravi Kiran
-Head of the Department
-M. Sarah Nireekshana
-Thesis Co-Ordinator
-External Examiner
-ii
 
-DECLARATION
-I declare that this project report titled “DTDP DEPARTMENT MANAGEMENT SYSTEM” is submitted by MR.RADHA KRISHNA DESHPANDE bearing Roll No. 19011BC038 in partial fulfillment of the degree of Bachelor of Technology in the Department of Digital Technology is a record of original work carried out by me under the supervision of Er.S.RAVI KIRAN and has not formed the basis for the award of any other degree or diploma, in this or any other Institution or University. In keeping with the ethical practice in reporting scientific information, due acknowledgments have been made wherever the findings of others have been cited.
-Name: ER.S.Ravi Kiran Designation: Project Guide Signature:
-iii
 
-ACKNOWLEDGMENT
-The satisfaction that accompanies the successful completion of the task would be put incomplete without the mention of the people who made it possible, whose constant guidance and encouragement crown all the efforts with success.
-We wish to express our deep sense of gratitude to Er.S.Ravi Kiran, Designation and Project Supervisor, Department of Digital Technology, Jawaharlal Nehru Architecture & Fine Arts University, for his able guidance and useful suggestions, which helped us in completing the project in time.
-We are particularly thankful to Er.S.Ravi Kiran, the Head of the Department, Department of Digital Technology, his guidance, intense support and encouragement, which helped us to mould our project into a successful one.
-We show gratitude to our honorable Principal Ch.Srinivas, for providing all facilities and support.
-We avail this opportunity to express our deep sense of gratitude and heartful thanks to Dr.N.Kavita Daryani Rao, Vice-Chancellor, JNAFAU for providing a congenial atmosphere to complete this project successfully.
-We also thank all the staff members of Department of Digital Technology for their valuable support and generous advice. Finally thanks to all our friends and family members for their continuous support and enthusiastic help.
-Yours Sincerely,
-RADHA KRISHNA DESHPANDE iv
+
+
 
 ABSTRACT
 The purpose of the DTDP department management system is to automate the existing manual system with the help of computerised equipment and full-fledged computer software, fulfilling their requirements so that the valuable data and information can be stored for a longer period of time with easy access. The system is a web-based application that can be accessed throughout the department. It deals with all kind of student details, academic related reports, course details, curriculum, batch details and other resource related details too. It tracks all the details of a student from the day one to the end of his course which can be used for all reporting purpose, tracking of attendance, progress in the course, completed semesters years, coming semester year curriculum details, project or any other final exam result and all these will be available for future references too.
 Our program will have the databases of students details, subjects details, attendance records, marks record and its department details in all aspects. DTDP department management system, as described above, can lead to an error-free, secure, reliable, and fast management system. It can help the user concentrate on their other activities rather than on the record-keeping. This system may be used for monitoring the overall activities as well as performance of the students. This system is being developed to maintain and facilitate easy access to information. For this the users must be registered with the system after which they can access as well as modify data as per the permissions given to them. It is a web based application that aims at providing information to all the levels of department.
 This system also contains all other books in the library module which are related to the DTDP department. For a given student/faculty can access the system to either upload or download some information from the database. Thus, it will help department in better utilise their resources.
 Keywords—Admin, Department system, Information, Management System, Student, Faculty
-v
 
-TABLE OF CONTENTS
-DESCRIPTION PAGE NO.
-CERTIFICATE.....................................................................................ii DECLARA TION..................................................................................iii ACKNOWLEDGMENT...........................................................................iv ABSTRACT.........................................................................................v LIST OF FIGURES.................................................................................x
-CHAPTER 1 INTRODUCTION...............................................................1 1.1 Objective........................................................................................2
-1.2 Scope..............................................................................................2 1.3 Functionalities...................................................................................3 1.4 Background......................................................................................4
-1.4.1 Problems in existing system...........................................................4
-1.4.2 Solution to these problems.............................................................4 1.5 Problem definiton................................................................................5 1.6 Aim of the project................................................................................5 1.7 Roles & responsibilities.........................................................................6
-CHAPTER 2 LITERATURE SURVEY.......................................................8 2.1 Paper 1............................................................................................8
-2.2 Paper 2............................................................................................8 2.3 Paper 3...........................................................................................9 2.4 Paper 4............................................................................................9
-CHAPTER 3 SYSTEM REQUIREMENT SPECIFICATION..........................10 3.1 Document purpose.............................................................................10 vi
-
-3.2 Intended audience and document overview ...............................................10 3.3 Definitions, Acronyms, and Abbrevations ................................................10 3.4 Functional requirements ......................................................................11 3.5 Non- Functional requirements ..............................................................11 3.6 Software requirements .......................................................................11 3.7 Operating systems supported .................................................................13 3.8 Debugger and emulator .......................................................................13 3.9 Hardware requirements ......................................................................13 3.10 Technologies used ...........................................................................13
-CHAPTER 4 SYSTEM DESIGN..............................................................14 4.1 System architecture ...........................................................................14 4.2 Module design .................................................................................15
-4.2.1 Admin ................................................................................15 4.2.2 Faculty ...............................................................................16 4.2.3 Student ...............................................................................17
-4.3 UML diagrams .................................................................................18 4.3.1 Block diagrams .....................................................................18 4.3.2 Activity diagrams ..................................................................23
-4.3.2.1 Admin Activities ......................................................23 4.3.2.2 Faculty Activities .....................................................26 4.3.2.3 Student Activities .....................................................27
-4.3.3 Use-case diagrams ..................................................................30 4.3.2.1 Admin use cases ......................................................30
-vii
-
-4.3.2.2 Faculty use cases .....................................................31
-4.3.2.3 Student use cases .....................................................31 4.3.4 Integration diagram.................................................................33 4.3.4.1 Admin and faculty interaction......................................33 4.3.4.2 Faculty and student interaction.....................................33
-4.3.4.3 Student and admin interaction .....................................34 CHAPTER 5 IMPLEMENTATION..........................................................37 5.1 Introduction ...................................................................................37 5.2 Implementation ...............................................................................38
-5.2.1 Creating views for adminapp.......................................................38 5.2.2 Creating views for facultyapp....................................................45 5.2.3 Creating views for studentapp....................................................48
-5.3 Creating models...............................................................................50 5.3.1 Adminapp models...................................................................50 5.3.2 Facultyapp models.................................................................52
-5.4 URLs in the college project .................................................................53 5.5 HTML pages for admin dashboard ...........................................................56 5.6 HTML pages for faculty dashboard.........................................................65 5.7 HTML pages for student dashboard .......................................................73 5.8 Screenshots.....................................................................................82
-5.8.1 Login pages.........................................................................82 5.8.2 Admin dashboard pages...........................................................83
-viii
-
-5.8.3 Faculty dashboard pages...........................................................88 5.8.4 Student dashboard pages...........................................................89 5.8.5 Database screenshots ..............................................................91
-CHAPTER 6 TESTING.........................................................................92 6.1 Unit testing in django..........................................................................92
-6.2 Integration testing in django..................................................................92 6.3 Functional testing in django..................................................................92 6.4 System testing in django.......................................................................93 6.5 Acceptance testing in django..................................................................93
-CHAPTER 7 CONCLUSION & FUTURE SCOPE......................................94 .
-7.1 Conclusion .....................................................................................94
-7.2 Future scope ....................................................................................95
-BIBLIOGRAPHY................................................................................97 .
-ix
-
-LIST OF FIGURES
-4.1 System Architecture ........................................................................ 14 4.3.1.1 Faculty Management ....................................................................18 4.3.1.2 Subject Management .....................................................................19
-4.3.1.3 Student Management .....................................................................19 4.3.1.4 Attendance Management .................................................................20 4.3.1.5 Marks & Results Management .........................................................20 4.3.1.6 Library Management .....................................................................21 4.3.1.7 Learning Management ...................................................................21 4.3.1.8 Alumni Management .....................................................................22 4.3.1.9 Thesis Management .....................................................................22 4.3.2.1 Activity diagram for admin user .......................................................25 4.3.2.2 Activity diagram for faculty user ......................................................27 4.3.2.3 Activity diagram for student user .....................................................29 4.3.3 Use-case diagram for whole system.....................................................32 4.3.3 Interaction diagram for whole system...................................................35 4.3.3 Entity Relationship diagram for whole system........................................36 5.1 Django Architecture...........................................................................37 5.8.1.1 Admin login page .........................................................................93 5.8.1.2 Faculty login page.........................................................................93 5.8.1.3 Studentlogin page.........................................................................93 5.8.2.1 Upload thesis ..............................................................................94
-x
-
-5.8.2.2 Add subject ...............................................................................94 5.8.2.3 Add student ................................................................................94 5.8.2.4 Manage thesis..............................................................................95 5.8.2.5 Manage subjects ..........................................................................95 5.8.2.6 Manage resources........................................................................95 5.8.2.7 Assign subject to faculty ................................................................96 5.8.2.8 View marks................................................................................96 5.8.2.9 Manage courses............................................................................96 5.8.2.10 Add resources ............................................................................97 5.8.2.11 Add semester marks ....................................................................97 5.8.2.12 View attendance..........................................................................97 5.8.2.13 Manage Alumni details .................................................................98 5.8.2.14 Manage Faculty ..........................................................................98 5.8.3.1 Add attendance ...........................................................................99 5.8.3.2 Add marks..................................................................................99 5.8.3.3 View attendance .........................................................................99 5.8.4.1 View marks .............................................................................100 5.8.4.2 View result ...............................................................................100 5.8.4.3 View attendance ........................................................................100 5.8.4.4 View course...............................................................................101 5.8.4.5 View resources...........................................................................101 5.8.4.6 View thesis...............................................................................101 5.8.5.1 Student records..........................................................................102
-xi
 
 CHAPTER 1 INTRODUCTION
 The DTDP Department Management system website is a comprehensive and user-friendly platform designed to streamline the management of various aspects within a department. It has been developed to override the problems prevailing in the manual system. It provides administrators, faculty members, and students with a centralized system to efficiently handle tasks related to faculty management, subject management, student management, attendance management, marks management, library management, learning management, alumni management, and thesis management.
