@@ -1,0 +1,314 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="{% static 'admin_static/img/logo/logo.png' %}" rel="icon">
+  <title>Admin - Dashboard</title>
+  <link href="{% static 'admin_static/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'admin_static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link href="{% static 'admin_static/css/ruang-admin.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+
+<body id="page-top">
+    <!-- swal message start --> 
+
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <script>swal({
+            title: "Success!",
+            text: "{{message}}",
+            icon: "success",
+            button: "OK",
+        });
+    </script>
+    
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+    <script>swal({
+            title: "Warning :)",
+            text: "{{message}}",
+            icon: "warning",
+            button: "OK",
+         
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+    <script>swal({
+            title: "info :)",
+            text: "{{message}}",
+            icon: "info",
+            button: "OK",
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <script>swal({
+            title: "error :)",
+            text: "{{message}}",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+  
+    <!-- swal message ends -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'admin_dashboard' %}">
+        <div class="sidebar-brand-icon">
+          <!-- <img src="img/logo/logo2.png"> -->
+          <h3>ADMIN</h3>
+        </div>
+        <!-- <div class="sidebar-brand-text mx-3">RuangAdmin</div> -->
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'admin_dashboard' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <hr class="sidebar-divider">
+
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Faculty Management</span>
+        </a>
+        <div id="collapseBootstrap" class="collapse " aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded ">
+            <ul>
+                <li class="">
+                    <a class="collapse-item " href="{% url 'add_faculty' %}">Add New Faculty</a>
+                </li>
+                <li>
+                    <a class="collapse-item" href="{% url 'manage_faculty' %}">Manage Faculty</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Subject Management</span>
+        </a>
+        <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Forms</h6> -->
+            <a class="collapse-item " href="{% url 'add_subject' %}">Add Subject</a>
+            <a class="collapse-item" href="{% url 'manage_subject' %}">Manage Subject</a>
+            <!-- <a class="collapse-item" href="{% url 'assign_sub_faculty' %}">Assign Subject to Faculty</a> -->
+          </div>
+        </div>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fa fa-address-book-o" aria-hidden="true"></i>
+          <span>Student Management</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'add_students' %}">Add Student</a>
+            <a class="collapse-item" href="{% url 'manage_student' %}">Manage Student</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTabl" aria-expanded="true"
+          aria-controls="collapseTabl">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Attendance Management</span>
+        </a>
+        <div id="collapseTabl" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item " href="{% url 'admin_view_attendance' %}">View Attendance Deatils</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTab" aria-expanded="true"
+          aria-controls="collapseTab">
+          <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+          <span>Marks Management</span>
+        </a>
+        <div id="collapseTab" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'add_sem_marks' %}">Add Semester Marks </a>
+            <a class="collapse-item" href="{% url 'admin_view_marks' %}">View Marks Deatils</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTa" aria-expanded="true"
+          aria-controls="collapseTa">
+          <i class="fas fa-fw fa-book"></i>
+          <span>Library Management</span>
+        </a>
+        <div id="collapseTa" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'add_resources' %}">Add Resources</a>
+            <a class="collapse-item active" href="{% url 'manage_resources' %}">Manage Resources</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseT" aria-expanded="true"
+          aria-controls="collapseT">
+          <i class="fa fa-leanpub" aria-hidden="true"></i>
+          <span>Learning Management</span>
+        </a>
+        <div id="collapseT" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'add_courses' %}">Add New Course</a>
+            <a class="collapse-item " href="{% url 'manage_course' %}">Manage Courses</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTab1" aria-expanded="true"
+          aria-controls="collapseTab1">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <span>Alumni Management</span>
+        </a>
+        <div id="collapseTab1" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'admin_add_alumni' %}">Add Alumni Details </a>
+            <a class="collapse-item" href="{% url 'manage_alumni' %}">Manage Alumni Deatils</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTab2" aria-expanded="true"
+          aria-controls="collapseTab2">
+          <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+          <span>Thesis Management</span>
+        </a>
+        <div id="collapseTab2" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'upload_thesis' %}">Upload Thesis Details </a>
+            <a class="collapse-item" href="{% url 'manage_thesis' %}">Manage Thesis Deatils</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <a href="{% url 'admin_logout' %}">
+              <button class="btn btn-warning"> Logout </button>
+            </a>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <!-- <h1 class="h3 mb-0 text-gray-800">Dashboard</h1> -->
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a>Library Management</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Manage Resources</li>
+            </ol>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                  <div class="table-responsive p-3">
+                    <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+                        <thead class="thead-light">
+                            <tr class="text-center">
+                                <th>#</th>
+                                <th>Book Titile</th>
+                                <th>Author Name</th>
+                                <th>Publisher Name</th>
+                                <th>Preferred Branch</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                          {% for i in mg_res %}
+                            <tr>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{i.Title}}</td>
+                                <td>{{i.Author_Name}}</td>
+                                <td>{{i.Publisher_Name}}</td>
+                                <td>{{i.Preferred_Name}}</td>
+                                <td>
+                                    <a onclick="return myFunction()" href="{% url 'delete_resourse' i.Library_ID %}">
+                                      <div class="d-flex">
+                                        <div class="btn btn-danger btn-icon-split">
+                                          <span class="text">Delete</span>
+                                          <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <script>
+    function myFunction() {
+        if (confirm(" Proceed to delete the Student..! ") == true) {
+        } 
+        else {
+            return false;
+        }
+    }
+</script>
+  <script src="{% static 'admin_static/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'admin_static/js/ruang-admin.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'admin_static/js/demo/chart-area-demo.js' %}"></script> 
+</body>
+
+</html>

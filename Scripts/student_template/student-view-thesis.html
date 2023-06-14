@@ -1,0 +1,277 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="{% static 'admin_static/img/logo/logo.png' %}" rel="icon">
+  <title>Student - Dashboard</title>
+  <link href="{% static 'admin_static/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'admin_static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'admin_static/css/ruang-admin.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body id="page-top">
+    <!-- swal message start --> 
+
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <script>swal({
+            title: "Success!",
+            text: "{{message}}",
+            icon: "success",
+            button: "OK",
+        });
+    </script>
+    
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+    <script>swal({
+            title: "Warning :)",
+            text: "{{message}}",
+            icon: "warning",
+            button: "OK",
+         
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+    <script>swal({
+            title: "info :)",
+            text: "{{message}}",
+            icon: "info",
+            button: "OK",
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <script>swal({
+            title: "error :)",
+            text: "{{message}}",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+  
+    <!-- swal message ends -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" style="background-color: rgb(230, 102, 51);" href="{% url 'student_dashboard' %}">
+        <div class="sidebar-brand-icon">
+          <!-- <img src="img/logo/logo2.png"> -->
+          <h5>Student RollNumber</h5>
+        </div>
+        <!-- <div class="sidebar-brand-text mx-3">RuangAdmin</div> -->
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'student_dashboard' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Attendance Management</span>
+        </a>
+        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Bootstrap UI</h6> -->
+            <a class="collapse-item" href="{% url 'student_attendance_details' %}">View Attendance Details</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Marks Management</span>
+        </a>
+        <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Forms</h6> -->
+            <a class="collapse-item" href="{% url 'student_marks_details' %}">View Marks Details </a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Result Management</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'student_view_results' %}">View Results</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTabl" aria-expanded="true"
+          aria-controls="collapseTabl">
+          <i class="fas fa-fw fa-book"></i>
+          <span>Library Management </span>
+        </a>
+        <div id="collapseTabl" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'student_view_book' %}">View Books</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTab" aria-expanded="true"
+          aria-controls="collapseTab">
+          <i class="material-icons" style="font-size: 18px;">local_library</i>
+          <span>Learning Management </span>
+        </a>
+        <div id="collapseTab" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'student_view_courses' %}">View Courses </a>
+            <a class="collapse-item" href="{% url 'student_my_courses' %}">My Course</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTa" aria-expanded="true"
+          aria-controls="collapseTa">
+          <i class="material-icons" style="font-size: 18px;">school</i>
+          <span>Alumni Management</span>
+        </a>
+        <div id="collapseTa" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item" href="{% url 'student_alumni_details' %}">View Alumni Details</a>
+          </div>
+        </div>
+      </li>
+  
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTab2" aria-expanded="true"
+          aria-controls="collapseTab2">
+          <i class="material-icons" style="font-size: 18px;">history_edu</i>
+          <span>Thesis Management</span>
+        </a>
+        <div id="collapseTab2" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Tables</h6> -->
+            <a class="collapse-item active" href="{% url 'student_view_thesis' %}">View Thesis </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" style="background-color: rgb(248, 160, 59);" >
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            
+            <a href="{% url 'stud_logout' %}">
+              <button class="btn text-light" style="background-color: rgb(226, 79, 79);"> Logout </button>
+            </a>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <!-- <h1 class="h3 mb-0 text-gray-800">Dashboard</h1> -->
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><p >Library Management</p></li>
+              <li class="breadcrumb-item active" aria-current="page">View Books</li>
+            </ol>
+          </div>
+
+          <div class="col-lg-10 m-auto">
+            <div class="card mb-4">
+              <div class="table-responsive p-3">
+                <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+                    <thead class="thead-light">
+                        <tr class="text-center">
+                            <th>#</th>
+                            <th>Thesis Name</th>
+                            <th>Thesis File</th>
+                            <!-- <th>Action</th> -->
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                      {% for i in stud_the %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Thesis_Name}}</td>
+                            <td> <a href="media/{{i.Thesis_File}}" target = "_blank">Open File</a> </td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+          <!--Row-->
+
+          
+
+          <!-- Modal Logout -->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                  <a href="login.html" class="btn btn-primary">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+     
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <script src="{% static 'admin_static/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'admin_static/js/ruang-admin.min.js' %}"></script>
+  <script src="{% static 'admin_static/vendor/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'admin_static/js/demo/chart-area-demo.js' %}"></script>  
+</body>
+
+</html>
