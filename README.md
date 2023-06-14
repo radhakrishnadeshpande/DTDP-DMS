@@ -1,30 +1,31 @@
 http://dtdp.s3-website.ap-south-1.amazonaws.com/
 
                                            
-                                          DTDP DEPARTMENT MANAGEMENT SYSTEM
-
-    An Information Technology Project submitted in partial fulfillment of Requirements for the Degree of Bachelor of Technology (DTDP)
-
-
-                                                       By
+                                   DTDP DEPARTMENT MANAGEMENT SYSTEM
+                                   
+            An Information Technology Project submitted in partial fulfillment of Requirements for the
+                                 Degree of Bachelor of Technology (DTDP)
 
 
-                                               RADHA KRISHNA DESHPANDE
+                                                 By
 
 
-                                                Regd No : 19011BC038
+                                        RADHA KRISHNA DESHPANDE
 
-                               B.Tech (Digital Techniques for Design and Planning) – VIII Semester
 
-                                                Under the guidance of
+                                          Regd No : 19011BC038
 
-                                                   ER.S.RAVI KIRAN
+                    B.Tech (Digital Techniques for Design and Planning) – VIII Semester
 
-                                          Department of Digital Technology
+                                         Under the guidance of
+
+                                            ER.S.RAVI KIRAN
+
+                                     Department of Digital Technology
                  
                  
-                 School of Planning and Architecture Jawaharlal Nehru Architecture and Fine Arts University 
-                                  Mahaveer Marg, Masab Tank, Hyderabad – 500028 June 2023
+      School of Planning and Architecture Jawaharlal Nehru Architecture and Fine Arts University 
+                       Mahaveer Marg, Masab Tank, Hyderabad – 500028 June 2023
  
 
 
