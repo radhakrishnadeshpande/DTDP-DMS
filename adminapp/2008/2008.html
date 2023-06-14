@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+  
+        @media screen and (min-width: 1024px){
+            .login{
+                margin-top: 580px;
+            }
+        }
+
+        .login-wrap {
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        z-index: 0;
+        }
+        .login-wrap:after {
+            background: #fff;
+        }
+        .signup-form{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+		.ftco-navbar-light .navbar-nav > .nav-item > .nav-link{
+    color: black;
+     }
+    img {
+    
+    border-style: none;
+    }
+    .login-wrap .form-group label {
+          font-size: 13px;
+        }
+      .login-wrap .form-control{
+        font-size: 12px;
+      }
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link{
+        color: white;
+    }
+    .ftco-navbar-light.scrolled .navbar-brand {
+        color: black;
+      padding-bottom: 0px;
+        
+    
+    }.navbar, span{
+      padding: 0;
+    }
+    .navbar{
+    
+      background: #ce4be8;
+        background: -moz-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, #ce4be8), color-stop(100%, #207ce5));
+        background: -webkit-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -o-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -ms-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -webkit-linear-gradient(315deg, #ce4be8 0%, #207ce5 100%);
+        background: -o-linear-gradient(315deg, #ce4be8 0%, #207ce5 100%);
+        background: linear-gradient(135deg, #ce4be8 0%, #207ce5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4be8', endColorstr='#207ce5', GradientType=1 );
+    }
+  
+
+.batch{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    margin: 4px;
+    background-color: #207ce5;
+    color: #fff;
+    border-style: none;
+    width: 72px;
+    
+}
+.batch :hover{
+background-color: #114581;
+}
+     
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<!-- <img src="/images/JNAFAU_logo.png"> -->
+		  <a class="navbar-brand" href="main-home.html"><span style="border-left: 4px ; padding-bottom: 0px; border-left-style: solid; border-color: #f9f7fa; padding-left: 10px;">DTDP</span></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="oi oi-menu"></span> Menu
+		</button>
+	 
+		<div class="collapse navbar-collapse" id="ftco-nav">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item "><a href="main-home.html" class="nav-link">Home</a></li>
+			  <li class="nav-item"><a href="main-about.html" class="nav-link">About</a></li>
+			  <li class="nav-item"><a href="main-instructor.html" class="nav-link">Instructor</a></li>
+			  <li class="nav-item  dropdown">
+				<a class="nav-link dropdown-toggle page-scroll" href="#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="admin-login.html"><span class="item-text">Admin Login</span></a>
+					<div class="dropdown-items-divide-hr"></div>
+					<a class="dropdown-item" href="faculty-login.html"><span class="item-text">Faculty Login</span></a>
+					<div class="dropdown-items-divide-hr"></div>
+					<a class="dropdown-item" href="student-login.html"><span class="item-text">Student Login</span></a>
+				</div>
+
+			</li>	
+      <li class="nav-item active"><a href="main-alumni.html" class="nav-link">Alumni</a></li>
+	
+      	  <li class="nav-item"><a href="main-gallery.html" class="nav-link">Gallery</a></li>
+      
+			  <li class="nav-item"><a href="main-contact.html" class="nav-link">Contact</a></li>
+		  </ul>
+	  </div>
+	 </div>
+	 </nav>
+     <br>
+     <br>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center" style="margin-top: 50px;" >
+            <div class="col-xl-5 login" style="background-color: #fff;">
+            
+                <div class="login-wrap" style="background-color: #fff; width: 400px; height: 400px;" >
+                    <h3 class="mt-1 text-center" style="padding-top: 10px;" >Alumni</h3>
+                    <div style="text-align: center;">
+                      <img  src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png" width="120px" height="120px">  
+                    </div>
+                    <form action="#" class="signup-form" style="background-color: #fff; padding-left: 14px; padding-right: 14px;">
+                       <div class="form-group">
+                          <h5 class="text-center">Choose Batch</h5><br>
+                         <div class="row">
+                            <div class="col-lg-3">
+                               <a href="../2008/2008.html"> <button  class="batch btn">2008 </button></a>
+                               
+                            </div>
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link type="text/css" rel="stylesheet" href="resources/sheet.css" >
+<style type="text/css">.ritz .waffle a { color: inherit; }.ritz .waffle .s2{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Times New Roman';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s3{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#0000ff;font-family:'Times New Roman';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s1{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Times New Roman';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s4{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Times New Roman';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s0{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;font-weight:bold;color:#000000;font-family:'Times New Roman';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}</style><div class="ritz grid-container" dir="ltr"><table class="waffle" cellspacing="0" cellpadding="0"><thead><tr><th class="row-header freezebar-origin-ltr"></th><th id="0C0" style="width:55px;" class="column-headers-background">A</th><th id="0C1" style="width:125px;" class="column-headers-background">B</th><th id="0C2" style="width:255px;" class="column-headers-background">C</th></tr></thead><tbody><tr style="height: 20px"><th id="0R0" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">1</div></th><td class="s0">Sl.No</td><td class="s0">Hall Ticket No.</td><td class="s0">Name of the Student</td></tr><tr style="height: 20px"><th id="0R1" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">2</div></th><td class="s1">1</td><td class="s2">08011BC001</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/konala-abhilash-70a15777">ABHILASH KONALA</a></td></tr><tr style="height: 20px"><th id="0R2" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">3</div></th><td class="s1">2</td><td class="s2">08011BC002</td><td class="s3"><a target="_blank" href="https://www.linkedin.com/pub/dir/Srirangam/+/in-6508-Hyderabad-Area,-India">ADITYA SRINU SRIRANGAM</a></td></tr><tr style="height: 20px"><th id="0R3" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">4</div></th><td class="s1">3</td><td class="s2">08011BC004</td><td class="s3"><a target="_blank" href="https://www.linkedin.com/in/anitha-reddy-gajjala-139a3761">ANITHA GAJJELA</a></td></tr><tr style="height: 20px"><th id="0R4" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">5</div></th><td class="s1">4</td><td class="s2">08011BC005</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/vharish88">BALANAGA VENKATA HARISH G</a></td></tr><tr style="height: 20px"><th id="0R5" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">6</div></th><td class="s1">5</td><td class="s2">08011BC006</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/adithya-bharadwaj-978bb0200">BHARATHI BHARADWAJA K  K </a></td></tr><tr style="height: 20px"><th id="0R6" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">7</div></th><td class="s1">6</td><td class="s2">08011BC007</td><td class="s3"><a target="_blank" href="https://scholar.google.com/citations?user=ffD98IYAAAAJ&amp;hl=en">DAMODAR REDDY N</a></td></tr><tr style="height: 20px"><th id="0R7" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">8</div></th><td class="s1">7</td><td class="s2">08011BC008</td><td class="s3"><a target="_blank" href="https://www.instagram.com/brogautamkumar/?hl=en">GOUTAM KUMAR MALAYALA </a></td></tr><tr style="height: 20px"><th id="0R8" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">9</div></th><td class="s1">8</td><td class="s2">08011BC009</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/harish-babu-koorakula-b6395a252">HARISH BABU KOYYAGURA</a></td></tr><tr style="height: 20px"><th id="0R9" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">10</div></th><td class="s1">9</td><td class="s2">08011BC010</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/harisha-bokka-06a20741">HARISHA BOKKA</a></td></tr><tr style="height: 20px"><th id="0R10" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">11</div></th><td class="s1">10</td><td class="s2">08011BC011</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/kapeta-harsha">HARSHA VARDHAN REDDY K.S</a></td></tr><tr style="height: 20px"><th id="0R11" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">12</div></th><td class="s1">11</td><td class="s2">08011BC012</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/hruday-kumar-vuttarkar-845310120">HRUDAY KUMAR VANGALA</a></td></tr><tr style="height: 20px"><th id="0R12" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">13</div></th><td class="s1">12</td><td class="s2">08011BC013</td><td class="s3"><a target="_blank" href="https://indiankanoon.org/search/?formInput=reddi%20%20%20doctypes%3A%20judgments%20sortby%3A%20mostrecent&amp;pagenum=3">JAYARAMI REDDY GONGATI</a></td></tr><tr style="height: 20px"><th id="0R13" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">14</div></th><td class="s1">13</td><td class="s2">08011BC014</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/karthik-m-35781416">KARTHIK M</a></td></tr><tr style="height: 20px"><th id="0R14" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">15</div></th><td class="s1">14</td><td class="s2">08011BC016</td><td class="s3"><a target="_blank" href="https://www.facebook.com/krishnamraju.sagiraju/">KRISHNAMRAJU SAGIRAJU</a></td></tr><tr style="height: 20px"><th id="0R15" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">16</div></th><td class="s1">15</td><td class="s2">08011BC020</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/malleswara-rao-340525b">MALLESWARA RAO MADU</a></td></tr><tr style="height: 20px"><th id="0R16" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">17</div></th><td class="s1">16</td><td class="s2">08011BC021</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/manirathnam-taduri-083ba476">MANIRATHNAM TADURI</a></td></tr><tr style="height: 20px"><th id="0R17" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">18</div></th><td class="s1">17</td><td class="s2">08011BC022</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/nalini">NALINI S </a></td></tr><tr style="height: 20px"><th id="0R18" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">19</div></th><td class="s1">18</td><td class="s2">08011BC023</td><td class="s3"><a target="_blank" href="https://www.instagram.com/prithvibaddula/">PRITHVI RAJ BADDULA</a></td></tr><tr style="height: 20px"><th id="0R19" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">20</div></th><td class="s1">19</td><td class="s2">08011BC025</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/katuru-rajesh-b93ab418b">RAJESH KATURU</a></td></tr><tr style="height: 20px"><th id="0R20" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">21</div></th><td class="s1">20</td><td class="s2">08011BC026</td><td class="s3"><a target="_blank" href="https://www.instagram.com/rakeshkanchukatla/?hl=en">RAKESH KANCHUKATLA</a></td></tr><tr style="height: 20px"><th id="0R21" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">22</div></th><td class="s1">21</td><td class="s2">08011BC027</td><td class="s3"><a target="_blank" href="https://www.instagram.com/ravibabukaluri/">RAVI BABU KALLURI</a></td></tr><tr style="height: 20px"><th id="0R22" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">23</div></th><td class="s1">22</td><td class="s2">08011BC028</td><td class="s3"><a target="_blank" href="https://www.instagram.com/ravkiranvfx/">RAVI KIRAN S</a></td></tr><tr style="height: 20px"><th id="0R23" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">24</div></th><td class="s1">23</td><td class="s2">08011BC030</td><td class="s3"><a target="_blank" href="https://www.linkedin.com/in/revathi-vennapusa-a60ab0b9">REVATHI VENNAPOOSA</a></td></tr><tr style="height: 20px"><th id="0R24" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">25</div></th><td class="s1">24</td><td class="s2">08011BC031</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/sandeep-reddy-moosala-5043869b">SANDEEP REDDY MOOSALA</a></td></tr><tr style="height: 20px"><th id="0R25" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">26</div></th><td class="s1">25</td><td class="s2">08011BC032</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/sathish-bandakindi-55519828">SATHISH BANDAKINDI</a></td></tr><tr style="height: 20px"><th id="0R26" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">27</div></th><td class="s1">26</td><td class="s2">08011BC035</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/shashikanth-m">SHASHIKANTH M</a></td></tr><tr style="height: 20px"><th id="0R27" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">28</div></th><td class="s1">27</td><td class="s2">08011BC036</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/shivajsharma">SHIVA SHARMA S</a></td></tr><tr style="height: 20px"><th id="0R28" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">29</div></th><td class="s1">28</td><td class="s2">08011BC037</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/shruti-panda-86736118a">SHRUTI PANDA</a></td></tr><tr style="height: 20px"><th id="0R29" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">30</div></th><td class="s1">29</td><td class="s2">08011BC038</td><td class="s3"><a target="_blank" href="https://www.facebook.com/sneha.srujana.5/">SNEHA SRUJANA N</a></td></tr><tr style="height: 20px"><th id="0R30" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">31</div></th><td class="s1">30</td><td class="s2">08011BC039</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/sravya-kalluri-738a4422a?trk=people-guest_people_search-card">SRAVYA KALLURI </a></td></tr><tr style="height: 20px"><th id="0R31" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">32</div></th><td class="s1">31</td><td class="s2">08011BC040</td><td class="s4">SRUJANA A</td></tr><tr style="height: 20px"><th id="0R32" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">33</div></th><td class="s1">32</td><td class="s2">08011BC041</td><td class="s3"><a target="_blank" href="https://ae.linkedin.com/in/sruthi-pappula-837170a9">SRUTHI PAPPULA</a></td></tr><tr style="height: 20px"><th id="0R33" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">34</div></th><td class="s1">33</td><td class="s2">08011BC042</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/swapnil-kumar-v-140772207?trk=public_profile_browsemap_profile-result-card_result-card_full-click">SWAPNIL KUMAR V </a></td></tr><tr style="height: 20px"><th id="0R34" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">35</div></th><td class="s1">34</td><td class="s2">08011BC043</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/swaroop-korukonda-196a1632">SWAROOP KORUKONDA S.S</a></td></tr><tr style="height: 20px"><th id="0R35" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">36</div></th><td class="s1">35</td><td class="s2">08011BC044</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/varsha-jagaragallu-varsha-a958b365">VARSHA JAGARAGALLU</a></td></tr><tr style="height: 20px"><th id="0R36" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">37</div></th><td class="s1">36</td><td class="s2">08011BC045</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/ravi-teja-8435a210b">VENKATA SATYA RAVI TEJA K</a></td></tr><tr style="height: 20px"><th id="0R37" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">38</div></th><td class="s1">37</td><td class="s2">08011BC046</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/vimal-chandra-sharma-phd-5ba04a131?trk=public_profile_browsemap">VIMAL CHANDRA SHARMA V</a></td></tr><tr style="height: 20px"><th id="0R38" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">39</div></th><td class="s1">38</td><td class="s2">08011BC047</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/vinaykumarreddy-cg">VINAY KUMAR REDDY BAKKA C G </a></td></tr><tr style="height: 20px"><th id="0R39" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">40</div></th><td class="s1">39</td><td class="s2">08011BC048</td><td class="s3"><a target="_blank" href="https://hi-in.facebook.com/gandipet.yadav/photos/">YADAIAH GATTUPALLI</a></td></tr><tr style="height: 20px"><th id="0R40" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">41</div></th><td class="s1">40</td><td class="s2">08011BC049</td><td class="s3"><a target="_blank" href="https://en.wikipedia.org/wiki/Udaykumar">UDAY KUMAR</a></td></tr><tr style="height: 20px"><th id="0R41" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">42</div></th><td class="s1">41</td><td class="s2">08011BC050</td><td class="s3"><a target="_blank" href="https://www.instagram.com/vijenderreddi/?hl=en">VIJENDER REDDY</a></td></tr><tr style="height: 20px"><th id="0R42" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px">43</div></th><td class="s1">42</td><td class="s2">08011BC051</td><td class="s3"><a target="_blank" href="https://in.linkedin.com/in/boopathi-s-247316144">BUPATHI S</a></td></tr></tbody></table></div>
+
+
+
+                         </div>
+                          <!-- <input   type="text" class="form-control" placeholder="Enter email" required> -->
+                       </div>
+                     </form>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+
+	  <script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

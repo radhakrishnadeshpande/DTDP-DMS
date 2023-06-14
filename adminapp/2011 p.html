@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      @media screen and (min-width: 1024px) {
+        .login {
+          margin-top: 580px;
+        }
+      }
+
+      .login-wrap {
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+        z-index: 0;
+      }
+      .login-wrap:after {
+        background: #fff;
+      }
+      .signup-form {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        color: black;
+      }
+      img {
+        border-style: none;
+      }
+      .login-wrap .form-group label {
+        font-size: 13px;
+      }
+      .login-wrap .form-control {
+        font-size: 12px;
+      }
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        color: white;
+      }
+      .ftco-navbar-light.scrolled .navbar-brand {
+        color: black;
+        padding-bottom: 0px;
+      }
+      .navbar,
+      span {
+        padding: 0;
+      }
+      .navbar {
+        background: #ce4be8;
+        background: -moz-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -webkit-gradient(
+          left top,
+          right bottom,
+          color-stop(0%, #ce4be8),
+          color-stop(100%, #207ce5)
+        );
+        background: -webkit-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -o-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -ms-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
+        background: -webkit-linear-gradient(315deg, #ce4be8 0%, #207ce5 100%);
+        background: -o-linear-gradient(315deg, #ce4be8 0%, #207ce5 100%);
+        background: linear-gradient(135deg, #ce4be8 0%, #207ce5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4be8', endColorstr='#207ce5', GradientType=1 );
+      }
+
+      .batch {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        margin: 4px;
+        background-color: #207ce5;
+        color: #fff;
+        border-style: none;
+        width: 72px;
+      }
+      .batch :hover {
+        background-color: #114581;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <!-- <img src="/images/JNAFAU_logo.png"> -->
+        <a class="navbar-brand" href="main-home.html"
+          ><span
+            style="
+              border-left: 4px;
+              padding-bottom: 0px;
+              border-left-style: solid;
+              border-color: #f9f7fa;
+              padding-left: 10px;
+            "
+            >DTDP</span
+          ></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="main-home.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="main-about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="main-instructor.html" class="nav-link">Instructor</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle page-scroll"
+                href="#video"
+                id="navbarDropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Login</a
+              >
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="admin-login.html"
+                  ><span class="item-text">Admin Login</span></a
+                >
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="faculty-login.html"
+                  ><span class="item-text">Faculty Login</span></a
+                >
+                <div class="dropdown-items-divide-hr"></div>
+                <a class="dropdown-item" href="student-login.html"
+                  ><span class="item-text">Student Login</span></a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="main-alumni.html" class="nav-link">Alumni</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="main-gallery.html" class="nav-link">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="main-contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="row d-flex justify-content-center" style="margin-top: 50px">
+        <div class="col-xl-5 login" style="background-color: #fff">
+          <div
+            class="login-wrap"
+            style="background-color: #fff; width: 400px; height: 400px"
+          >
+            <h3 class="mt-1 text-center" style="padding-top: 10px">Alumni</h3>
+            <div style="text-align: center">
+              <img
+                src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png"
+                width="120px"
+                height="120px"
+              />
+            </div>
+            <form
+              action="#"
+              class="signup-form"
+              style="
+                background-color: #fff;
+                padding-left: 14px;
+                padding-right: 14px;
+              "
+            >
+              <div>
+                <h5 class="text-center">2011</h5>
+                <br />
+                <div class="row">
+                  <div class="col-lg-3">
+                    <input
+                      type="button"
+                      onclick="location.href='2011 p.html';"
+                      value="2011"
+                    />
+                  </div>
+                  <meta
+                    http-equiv="Content-Type"
+                    content="text/html; charset=utf-8"
+                  /><link
+                    type="text/css"
+                    rel="stylesheet"
+                    href="resources/sheet.css"
+                  />
+                  <style type="text/css">
+                    .ritz .waffle a {
+                      color: inherit;
+                    }
+                    .ritz .waffle .s4 {
+                      border-bottom: 1px SOLID #000000;
+                      border-right: 1px SOLID #000000;
+                      background-color: #ffffff;
+                      text-align: left;
+                      color: #000000;
+                      font-family: "docs-Bookman Old Style", Arial;
+                      font-size: 10pt;
+                      vertical-align: bottom;
+                      white-space: normal;
+                      overflow: hidden;
+                      word-wrap: break-word;
+                      direction: ltr;
+                      padding: 2px 3px 2px 3px;
+                    }
+                    .ritz .waffle .s3 {
+                      border-bottom: 1px SOLID #000000;
+                      border-right: 1px SOLID #000000;
+                      background-color: #ffffff;
+                      text-align: left;
+                      text-decoration: underline;
+                      -webkit-text-decoration-skip: none;
+                      text-decoration-skip-ink: none;
+                      color: #0000ff;
+                      font-family: "docs-Bookman Old Style", Arial;
+                      font-size: 10pt;
+                      vertical-align: bottom;
+                      white-space: normal;
+                      overflow: hidden;
+                      word-wrap: break-word;
+                      direction: ltr;
+                      padding: 2px 3px 2px 3px;
+                    }
+                    .ritz .waffle .s1 {
+                      border-bottom: 1px SOLID #000000;
+                      border-right: 1px SOLID #000000;
+                      background-color: #ffffff;
+                      text-align: center;
+                      color: #000000;
+                      font-family: "docs-Book Antiqua", Arial;
+                      font-size: 12pt;
+                      vertical-align: bottom;
+                      white-space: normal;
+                      overflow: hidden;
+                      word-wrap: break-word;
+                      direction: ltr;
+                      padding: 2px 3px 2px 3px;
+                    }
+                    .ritz .waffle .s0 {
+                      border-bottom: 1px SOLID #000000;
+                      border-right: 1px SOLID #000000;
+                      background-color: #ffffff;
+                      text-align: center;
+                      font-weight: bold;
+                      color: #000000;
+                      font-family: "docs-Book Antiqua", Arial;
+                      font-size: 11pt;
+                      vertical-align: bottom;
+                      white-space: normal;
+                      overflow: hidden;
+                      word-wrap: break-word;
+                      direction: ltr;
+                      padding: 2px 3px 2px 3px;
+                    }
+                    .ritz .waffle .s2 {
+                      border-bottom: 1px SOLID #000000;
+                      border-right: 1px SOLID #000000;
+                      background-color: #ffffff;
+                      text-align: center;
+                      color: #000000;
+                      font-family: "Times New Roman";
+                      font-size: 11pt;
+                      vertical-align: bottom;
+                      white-space: nowrap;
+                      direction: ltr;
+                      padding: 2px 3px 2px 3px;
+                    }
+                  </style>
+                  <div class="ritz grid-container" dir="ltr">
+                    <table class="waffle" cellspacing="0" cellpadding="0">
+                      <thead>
+                        <tr>
+                          <th class="row-header freezebar-origin-ltr"></th>
+                          <th
+                            id="0C0"
+                            style="width: 55px"
+                            class="column-headers-background"
+                          >
+                            A
+                          </th>
+                          <th
+                            id="0C1"
+                            style="width: 171px"
+                            class="column-headers-background"
+                          >
+                            B
+                          </th>
+                          <th
+                            id="0C2"
+                            style="width: 342px"
+                            class="column-headers-background"
+                          >
+                            C
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R0"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              1
+                            </div>
+                          </th>
+                          <td class="s0">Sl.No</td>
+                          <td class="s0">Hall Ticket No.</td>
+                          <td class="s0">Name of the Student</td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R1"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              2
+                            </div>
+                          </th>
+                          <td class="s1">1</td>
+                          <td class="s2">11011BC002</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/hrudai-chand-akurati-99363158"
+                              >AKURATI HRUDAI CHAND</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R2"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              3
+                            </div>
+                          </th>
+                          <td class="s1">2</td>
+                          <td class="s2">11011BC005</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/vijaypannala"
+                              >BHIMANAPATI VIJAY BHASKER REDDY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R3"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              4
+                            </div>
+                          </th>
+                          <td class="s1">3</td>
+                          <td class="s2">11011BC007</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.linkedin.com/in/rajubommana"
+                              >BOMMANA RAJU</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R4"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              5
+                            </div>
+                          </th>
+                          <td class="s1">4</td>
+                          <td class="s2">11011BC008</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/d-praphulla-kumar-patro-59741845"
+                              >D PRAPHULLA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R5"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              6
+                            </div>
+                          </th>
+                          <td class="s1">5</td>
+                          <td class="s2">11011BC009</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://www.facebook.com/shivamadhav.annadata/"
+                              >DASARI VARUN REDDY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R6"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              7
+                            </div>
+                          </th>
+                          <td class="s1">6</td>
+                          <td class="s2">11011BC011</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/prashant-reddy-9a8358a"
+                              >DUDIPALA PRASHANTH REDDY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R7"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              8
+                            </div>
+                          </th>
+                          <td class="s1">7</td>
+                          <td class="s2">11011BC012</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.linkedin.com/in/sharath-reddy-dumbala-163145130"
+                              >DUMBALA SHARATH KUMAR REDDY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R8"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              9
+                            </div>
+                          </th>
+                          <td class="s1">8</td>
+                          <td class="s2">11011BC013</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/gangadhara-santhosh-3604b0142"
+                              >GANGADHARA SANTHOSH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R9"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              10
+                            </div>
+                          </th>
+                          <td class="s1">9</td>
+                          <td class="s2">11011BC014</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/gona-mounika-7372b77b"
+                              >GONA MOUNIKA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R10"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              11
+                            </div>
+                          </th>
+                          <td class="s1">10</td>
+                          <td class="s2">11011BC015</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/archana-brahmarouthu-0910-5a110081"
+                              >GOTTI BRUNDA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R11"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              12
+                            </div>
+                          </th>
+                          <td class="s1">11</td>
+                          <td class="s2">11011BC016</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/goutam-akash-singh-6a6021146"
+                              >GOUTAM AKASH SINGH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R12"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              13
+                            </div>
+                          </th>
+                          <td class="s1">12</td>
+                          <td class="s2">11011BC017</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.behance.net/hassankumarg"
+                              >HASSAN KUMAR GUNDU</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R13"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              14
+                            </div>
+                          </th>
+                          <td class="s1">13</td>
+                          <td class="s2">11011BC018</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/j-bhavana-403"
+                              >J BHAVANA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R14"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              15
+                            </div>
+                          </th>
+                          <td class="s1">14</td>
+                          <td class="s2">11011BC020</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/sudhakar-kagithapu-9332901b8"
+                              >KAGITAPU SUDHAKAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R15"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              16
+                            </div>
+                          </th>
+                          <td class="s1">15</td>
+                          <td class="s2">11011BC021</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/kanaparthi-mounika-58bb88114"
+                              >KANAPARTHI MOUNIKA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R16"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              17
+                            </div>
+                          </th>
+                          <td class="s1">16</td>
+                          <td class="s2">11011BC024</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.facebook.com/konathala.narasimharao/"
+                              >KONATHALA NARASIMHA RAO</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R17"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              18
+                            </div>
+                          </th>
+                          <td class="s1">17</td>
+                          <td class="s2">11011BC025</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/kuppireddy-spurthi-91182621"
+                              >KUPIREDDY SPOORTHI</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R18"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              19
+                            </div>
+                          </th>
+                          <td class="s1">18</td>
+                          <td class="s2">11011BC026</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/k-niharika-7381621b1"
+                              >M SHIVASAIKUMAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R19"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              20
+                            </div>
+                          </th>
+                          <td class="s1">19</td>
+                          <td class="s2">11011BC027</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/phaneehyd"
+                              >MADDU PHANEENDRA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R20"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              21
+                            </div>
+                          </th>
+                          <td class="s1">20</td>
+                          <td class="s2">11011BC029</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/sesha-sai-manchala-29083b144"
+                              >MANCHALA SESHA SAI</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R21"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              22
+                            </div>
+                          </th>
+                          <td class="s1">21</td>
+                          <td class="s2">11011BC032</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/vuha-latha-myneni-771b62a6"
+                              >MYNENI VUHALATHA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R22"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              23
+                            </div>
+                          </th>
+                          <td class="s1">22</td>
+                          <td class="s2">11011BC033</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.linkedin.com/in/ramesh-narra99"
+                              >NARRA RAMESH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R23"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              24
+                            </div>
+                          </th>
+                          <td class="s1">23</td>
+                          <td class="s2">11011BC034</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/venkata-phani-kumar-nekkanti-54866897"
+                              >NELAKANTI VENKATA PHANI SAHAJA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R24"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              25
+                            </div>
+                          </th>
+                          <td class="s1">24</td>
+                          <td class="s2">11011BC036</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/ojasvita-singh-767911b4"
+                              >OJASVITA SINGH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R25"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              26
+                            </div>
+                          </th>
+                          <td class="s1">25</td>
+                          <td class="s2">11011BC037</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/srinivas-reddy-maligi-reddy-28594852"
+                              >PARREPATI SWAROOPARANI</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R26"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              27
+                            </div>
+                          </th>
+                          <td class="s1">26</td>
+                          <td class="s2">11011BC038</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/marchella-renuka-5199ab83"
+                              >PONNAPLLI ABHINAY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R27"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              28
+                            </div>
+                          </th>
+                          <td class="s1">27</td>
+                          <td class="s2">11011BC039</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.facebook.com/public/Neha-Puligilla"
+                              >PULIGILLA NEHA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R28"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              29
+                            </div>
+                          </th>
+                          <td class="s1">28</td>
+                          <td class="s2">11011BC041</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/divya-sree-rajuladevi"
+                              >RAJULADEVI DIVYASREE</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R29"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              30
+                            </div>
+                          </th>
+                          <td class="s1">29</td>
+                          <td class="s2">11011BC042</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/sanjana-ravikanti-45b768114"
+                              >RAVIKANTI SANJANA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R30"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              31
+                            </div>
+                          </th>
+                          <td class="s1">30</td>
+                          <td class="s2">11011BC044</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.facebook.com/public/Sangala-Sreenivasulu"
+                              >SANGALA SREENIVASULU</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R31"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              32
+                            </div>
+                          </th>
+                          <td class="s1">31</td>
+                          <td class="s2">11011BC045</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.linkedin.com/in/sarachetan"
+                              >SARA CHETAN KUMAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R32"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              33
+                            </div>
+                          </th>
+                          <td class="s1">32</td>
+                          <td class="s2">11011BC048</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/chidura-sneha-35219681"
+                              >SNEHA CHIDURA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R33"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              34
+                            </div>
+                          </th>
+                          <td class="s1">33</td>
+                          <td class="s2">11011BC049</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.mastersindia.co/gst-search/?name=tandrala-sireesh&amp;gstin=36BERPT9738Q1ZZ"
+                              >TANDRALA SIREESH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R34"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              35
+                            </div>
+                          </th>
+                          <td class="s1">34</td>
+                          <td class="s2">11011BC050</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.youtube.com/channel/UC1ewNSEUhjY9CQjl1_kbdEw"
+                              >THAMMALA AKHIL KUMAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R35"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              36
+                            </div>
+                          </th>
+                          <td class="s1">35</td>
+                          <td class="s2">11011BC051</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/srinath-thipparapu"
+                              >TOPARAPU SRINATH KUMAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R36"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              37
+                            </div>
+                          </th>
+                          <td class="s1">36</td>
+                          <td class="s2">11011BC052</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/thakur-sai-kiran-singh-344431217"
+                              >UDAYAGIRI M N V KRISHNA</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R37"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              38
+                            </div>
+                          </th>
+                          <td class="s1">37</td>
+                          <td class="s2">11011BC053</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://www.youtube.com/channel/UCGUNkgpcny67FyAz9-xsKsw"
+                              >VANARASA BOSE BABU</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R38"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              39
+                            </div>
+                          </th>
+                          <td class="s1">38</td>
+                          <td class="s2">11011BC054</td>
+                          <td class="s4">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/ramesh-babu-thummaginjala-44205721"
+                              >VEDURUPAKA SHIVA KUMAR</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R39"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              40
+                            </div>
+                          </th>
+                          <td class="s1">39</td>
+                          <td class="s2">11011BC055</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://uk.linkedin.com/in/saikishore4594?trk=public_profile_browsemap"
+                              >VENISHETTI SAIKISHORE</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R40"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              41
+                            </div>
+                          </th>
+                          <td class="s1">40</td>
+                          <td class="s2">11011BC056</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/gowthami-yeluri-17368254"
+                              >YELURI GOWTHAMI</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R41"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              42
+                            </div>
+                          </th>
+                          <td class="s1">41</td>
+                          <td class="s2">11011BC057</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/giridhar-reddy-vennapusa"
+                              >VENNAPUSA GIRIDHAR REDDY</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R42"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              43
+                            </div>
+                          </th>
+                          <td class="s1">42</td>
+                          <td class="s2">11011BC058</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.facebook.com/lohith.reddy.146/"
+                              >MAVURAM LOHITH</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R43"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              44
+                            </div>
+                          </th>
+                          <td class="s1">43</td>
+                          <td class="s2">11011BC059</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://in.linkedin.com/in/sunil-thota-99248b22"
+                              >THOTA SUNIL</a
+                            >
+                          </td>
+                        </tr>
+                        <tr style="height: 20px">
+                          <th
+                            id="0R44"
+                            style="height: 20px"
+                            class="row-headers-background"
+                          >
+                            <div
+                              class="row-header-wrapper"
+                              style="line-height: 20px"
+                            >
+                              45
+                            </div>
+                          </th>
+                          <td class="s1">44</td>
+                          <td class="s2">11011BC060</td>
+                          <td class="s3">
+                            <a
+                              target="_blank"
+                              href="https://www.linkedin.com/in/devender-rapolu"
+                              >RAPOLU DEVENDER</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- <input   type="text" class="form-control" placeholder="Enter email" required> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
